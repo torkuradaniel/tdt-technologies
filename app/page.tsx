@@ -251,11 +251,11 @@ export default function Home() {
           </p>
         </div>
         <div className="contact-actions">
-          <a className="primary-link" href="mailto:hello@tdttechnologies.com">
-            hello@tdttechnologies.com
+          <a className="primary-link" href="mailto:d@torkura.com">
+            d@torkura.com
           </a>
           <p className="contact-meta">
-            Lagos and global, working with leadership teams ready to build.
+            Global, working with leadership teams ready to build.
           </p>
         </div>
       </section>
