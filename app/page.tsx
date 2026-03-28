@@ -242,7 +242,7 @@ export default function Home() {
 
       <section className="contact-section" id="contact">
         <div className="contact-copy">
-          <p className="section-kicker">Contact</p>
+          {/* <p className="section-kicker">Contact</p> */}
           <h2>Bring us in when you want the work to change, not just the presentation.</h2>
           <p>
             We partner with teams that are ready to move from AI interest to AI

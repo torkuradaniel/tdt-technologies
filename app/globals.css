@@ -437,6 +437,10 @@ a {
     padding-bottom: 2rem;
   }
 
+  .topbar-cta {
+    display: none;
+  }
+
   .topbar,
   .footer {
     flex-direction: column;
