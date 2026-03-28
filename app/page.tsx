@@ -81,6 +81,21 @@ const sectors = [
   "Teams building for durable operational change",
 ];
 
+const labSignals = [
+  {
+    title: "Hands-on delivery",
+    detail: "We embed with teams and work inside the process.",
+  },
+  {
+    title: "Pragmatic tooling",
+    detail: "Existing tools first, custom builds only when needed.",
+  },
+  {
+    title: "Measurable impact",
+    detail: "Every engagement is tied to operational outcomes.",
+  },
+];
+
 export default function Home() {
   return (
     <main className="site">
@@ -151,6 +166,15 @@ export default function Home() {
       <section className="logo-strip" aria-label="Ideal partners">
         {logoStrip.map((item) => (
           <span key={item}>{item}</span>
+        ))}
+      </section>
+
+      <section className="signal-band" aria-label="Lab principles">
+        {labSignals.map((item) => (
+          <article key={item.title} className="signal-card">
+            <h3>{item.title}</h3>
+            <p>{item.detail}</p>
+          </article>
         ))}
       </section>
 
