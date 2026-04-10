@@ -83,14 +83,17 @@ const sectors = [
 
 const labSignals = [
   {
+    num: "01",
     title: "Hands-on delivery",
     detail: "We embed with teams and work inside the process.",
   },
   {
+    num: "02",
     title: "Pragmatic tooling",
     detail: "Existing tools first, custom builds only when needed.",
   },
   {
+    num: "03",
     title: "Measurable impact",
     detail: "Every engagement is tied to operational outcomes.",
   },
@@ -121,7 +124,10 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">TDT Technologies Lab</p>
-          <h1>We help organisations actually use AI, not just talk about it.</h1>
+          <h1>
+            We help organisations actually use <em>AI</em>, not just talk about
+            it.
+          </h1>
           <p className="lede">
             We are an embedded AI lab that comes into a company, gets its hands
             dirty, and helps rebuild how work happens from the inside. Smarter
@@ -172,6 +178,7 @@ export default function Home() {
       <section className="signal-band" aria-label="Lab principles">
         {labSignals.map((item) => (
           <article key={item.title} className="signal-card">
+            <span className="signal-card-num">{item.num}</span>
             <h3>{item.title}</h3>
             <p>{item.detail}</p>
           </article>
@@ -199,13 +206,23 @@ export default function Home() {
 
       <section className="capability-section" id="capabilities">
         <div className="section-head">
-          <p className="section-kicker">What we actually do</p>
-          <h2>We stay far past the kickoff meeting and work until the transformation is real.</h2>
+          <div>
+            <p className="section-kicker">What we actually do</p>
+            <h2>We stay far past the kickoff meeting.</h2>
+          </div>
+          <div className="section-head-body">
+            <p>
+              We work until the transformation is real — not until the
+              presentation looks good. Six capabilities, one standard: it either
+              works inside the business or we are not finished.
+            </p>
+          </div>
         </div>
 
         <div className="capability-list">
-          {capabilities.map((item) => (
+          {capabilities.map((item, i) => (
             <article key={item.title} className="capability-item">
+              <span className="cap-num">{String(i + 1).padStart(2, "0")}</span>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </article>
@@ -230,14 +247,22 @@ export default function Home() {
 
       <section className="process-section" id="model">
         <div className="section-head">
-          <p className="section-kicker">How we work</p>
-          <h2>We operate like a lab: embedded, pragmatic, fast, and accountable.</h2>
+          <div>
+            <p className="section-kicker">How we work</p>
+            <h2>We operate like a lab.</h2>
+          </div>
+          <div className="section-head-body">
+            <p>
+              Embedded, pragmatic, fast, and accountable. Three principles that
+              separate a lab from a consultancy.
+            </p>
+          </div>
         </div>
 
         <div className="process-timeline">
           {operatingSystem.map((item) => (
             <article key={item.step} className="timeline-item">
-              <p className="timeline-step">{item.step}</p>
+              <span className="timeline-step">{item.step}</span>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </article>
@@ -248,7 +273,7 @@ export default function Home() {
       <section className="fit-section" id="fit">
         <div className="fit-copy">
           <p className="section-kicker">Who we serve</p>
-          <h2>We work best with organisations that are ready to turn AI interest into operational change.</h2>
+          <h2>We work best with organisations ready to move.</h2>
           <p>
             We are focused on organisations ready to move: businesses with
             serious leadership intent, messy workflows, and a real need for
@@ -266,7 +291,6 @@ export default function Home() {
 
       <section className="contact-section" id="contact">
         <div className="contact-copy">
-          {/* <p className="section-kicker">Contact</p> */}
           <h2>Bring us in when you want the work to change, not just the presentation.</h2>
           <p>
             We partner with teams that are ready to move from AI interest to AI
