@@ -718,5 +718,17 @@ a { color: inherit; text-decoration: none; }
 
   .timeline-step { font-size: 3.5rem; }
 
-  .logo-strip span { padding: 0.35rem 0.65rem; font-size: 0.68rem; }
+  .logo-strip {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .logo-strip span {
+    padding: 0.65rem 0;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.72rem;
+  }
+
+  .logo-strip span:last-child { border-bottom: none; }
 }
